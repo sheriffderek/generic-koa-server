@@ -33,3 +33,7 @@
 #### 3. Add sequelize CLI
   * https://github.com/rtablada/sequelize-cli-esm/blob/master/README.md
   * regular sequelize + esm
+
+#### 4. Change default config to something more obvious
+  * db - or database.js
+  * make it a .js file
