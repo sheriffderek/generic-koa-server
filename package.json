@@ -1,0 +1,23 @@
+{
+  "name": "koa-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Derek Wood <derek@sheriffderek.consulting>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "start:dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "@koa/cors": "^3.0.0",
+    "dotenv": "^7.0.0",
+    "esm": "^3.2.18",
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-logger": "^3.2.0",
+    "koa-router": "^7.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}
