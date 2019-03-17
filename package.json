@@ -6,7 +6,8 @@
   "license": "MIT",
   "scripts": {
     "start": "node index.js",
-    "start:dev": "nodemon index.js"
+    "start:dev": "nodemon index.js",
+    "db:create": "yarn sequelize-cli-esm db:create"
   },
   "dependencies": {
     "@koa/cors": "^3.0.0",

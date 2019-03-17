@@ -34,6 +34,17 @@
   * https://github.com/rtablada/sequelize-cli-esm/blob/master/README.md
   * regular sequelize + esm
 
-#### 4. Change default config to something more obvious
+#### 4. Initialize a database
+  * `yarn sequelize-esm init` (note / the use of `yarn` might be new here)
+
+#### 5. Change default config to something more obvious
   * db - or database.js
   * make it a .js file
+
+#### 6. Make sure you have postgres installed
+  * At this point I got `ERROR: connect ECONNREFUSED 127.0.0.1:5432` when I tried to db:create
+  * Which means postgress isn't running
+  * Mention this to Ryan
+
+### 7. Create a database
+  * update path in the model index
