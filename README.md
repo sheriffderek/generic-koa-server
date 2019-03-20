@@ -58,5 +58,6 @@
   * .... got a little whacky in here
   * ... I'm not sure why 'thing' isn't able to post to the db
   * .. authors works... : /
+  * I put in some quick little try catch blocks / but these should be abstracted away
 
 
