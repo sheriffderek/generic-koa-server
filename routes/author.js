@@ -17,24 +17,16 @@ const serialize = (model)=> {
 };
 
 router.get('/', async (ctx)=> {
-  try {
-    const authors = await ctx.app.db.Author.findAll();
-    ctx.body = { data: authors.map(serialize) };
-  } catch (error) {
-    ctx.body = `something is not cool...`;
-  }
+  const authors = await ctx.app.db.Author.findAll();
+  ctx.body = { data: authors.map(serialize) };
 });
 
 router.get('/:id', async (ctx)=> {
   const id = ctx.params.id;
-  try {
-    const author = await ctx.app.db.Author.findByPk(id);
-    ctx.body = {
-      data: serialize(author),
-    };
-  } catch(error) {
-    ctx.body = `An id of ${id} could not be found: ${error}`;
-  }
+  const author = await ctx.app.db.Author.findByPk(id);
+  ctx.body = {
+    data: serialize(author),
+  };
 });
 
 router.post('/', async (ctx)=> {
@@ -53,17 +45,12 @@ router.post('/', async (ctx)=> {
 router.patch('/:id', async (ctx)=> {
   const attrs = ctx.request.body.data.attributes;
   const id = ctx.params.id;
-  
-  try {
-    const author = await ctx.app.db.Author.findByPk(id);
-    author.set(attrs);
-    await author.save();
-    ctx.body = {
-      data: serialize(author),
-    };
-  } catch(error) {
-    ctx.body = `An id of ${id} could not be found?: ${error}`;
-  }
+  const author = await ctx.app.db.Author.findByPk(id);
+  author.set(attrs);
+  await author.save();
+  ctx.body = {
+    data: serialize(author),
+  };
 });
 
 router.del('/:id', async (ctx)=> {
