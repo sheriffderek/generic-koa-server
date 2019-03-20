@@ -1,30 +1,29 @@
 import Router from 'koa-router';
-import Thing from './thing';
+
 const router = new Router();
 
-router.get('/', async(ctx)=> {
-  const things = await ctx.app.db.Thing.findAll();
-
-  ctx.body = things;
+router.get('/', async (ctx)=> {
+  try {
+    const things = await ctx.app.db.Thing.findAll();
+    ctx.body = things;
+  } catch (error) {
+    console.log('e', error);
+  }
 });
 
-router.post('/', async(context)=> {
-  const attributes = context.request.body.data.attributes;
-  // at this stage - use insomnia or postman to try this out... 
+router.post('/', async (ctx)=> {
 
-  /*
-  {
-    "data": {
-      "type": "things",
-      "attributes": {
-        "first": 'hi',
-        "there": 'there'
-      }
-    }
+    const attrs = ctx.request.body.data.attributes;
+    const thing = await ctx.app.db.Thing.create(attrs);
+    ctx.body = thing;
+
+  try {
+    
   }
-  */
+  catch(error) {
+    console.log('/things', error);
+  }
 
-  context.body = attributes;
 });
 
 export default router.routes();

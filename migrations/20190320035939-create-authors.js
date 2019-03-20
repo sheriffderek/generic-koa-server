@@ -1,7 +1,7 @@
 export default {
   async up(queryInterface, Sequelize) {
 
-    await queryInterface.createTable('Things', {
+    await queryInterface.createTable('Authors', {
       id: {
         type: Sequelize.INTEGER,
         primaryKey: true,
@@ -21,24 +21,9 @@ export default {
         type: Sequelize.DATE
       }
     });
-    /*
-      Add altering commands here.
-      Await any promises to handle asynchronicity.
-
-      Example:
-      return  await queryInterface.createTable('users', { id: Sequelize.INTEGER });
-    */
   },
 
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Things');
-
-    /*
-      Add reverting commands here.
-      Await any promises to handle asynchronicity.
-
-      Example:
-      return  await queryInterface.dropTable('users');
-    */
+    await queryInterface.dropTable('Authors');
   }
 };

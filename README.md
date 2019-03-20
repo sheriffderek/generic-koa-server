@@ -20,6 +20,7 @@
 #### 5. Check out .env and config options
   * use 'port' as an example
 
+
 ### Step 02
 
 #### 1. Add Sequelize (ORM) http://docs.sequelizejs.com
@@ -46,5 +47,16 @@
   * Which means postgress isn't running
   * Mention this to Ryan
 
-### 7. Create a database
+#### 7. Create a database
   * update path in the model index
+
+
+### Step 03
+  * Create a migration `yarn sequelize-esm migration:generate --name=your-migration-name` (note yarn)
+  * Fill out this new migration. (camelCase column names)
+  * Create a model for the resourse
+  * .... got a little whacky in here
+  * ... I'm not sure why 'thing' isn't able to post to the db
+  * .. authors works... : /
+
+
