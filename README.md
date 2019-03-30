@@ -13,6 +13,7 @@
 
 #### 3. Build a route
   * check it in insomnia or postman etc.
+  * application/vnd.api+json - for headers ContentType and Accept
 
 #### 4. Extract the route into another file
   * check it in insomnia or postman etc.
@@ -60,4 +61,7 @@
   * .. authors works... : /
   * I put in some quick little try catch blocks / but these should be abstracted away
 
-
+### Step 4
+  * Create custom errors
+  * Create findOrFail request to use instead of findByPk
+  * use error there / simplify
