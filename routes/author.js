@@ -1,4 +1,5 @@
 import Router from 'koa-router';
+import NotFoundError from '../errors/not-found';
 
 const router = new Router();
 
@@ -24,6 +25,9 @@ router.get('/', async (ctx)=> {
 router.get('/:id', async (ctx)=> {
   const id = ctx.params.id;
   const author = await ctx.app.db.Author.findByPk(id);
+  if (author === null) {
+    throw new NotFoundError('Author', id);
+  }
   ctx.body = {
     data: serialize(author),
   };
