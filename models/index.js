@@ -29,7 +29,8 @@ fs
 
 Object.keys(db).forEach(modelName => {
   const Model = db[modelName];
-  if (Model.associate) {
+
+  if (Model.associate) { // note how things are associated
     Model.associate(db);
   }
 

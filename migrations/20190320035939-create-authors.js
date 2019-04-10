@@ -1,6 +1,6 @@
 export default {
-  async up(queryInterface, Sequelize) {
 
+  async up(queryInterface, Sequelize) {
     await queryInterface.createTable('Authors', {
       id: {
         type: Sequelize.INTEGER,
@@ -25,5 +25,6 @@ export default {
 
   async down(queryInterface, Sequelize) {
     await queryInterface.dropTable('Authors');
-  }
+  },
+
 };
