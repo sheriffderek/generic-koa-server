@@ -65,3 +65,17 @@
   * Create custom errors
   * Create findOrFail request to use instead of findByPk
   * use error there / simplify
+
+### Step 5
+  * 26 Creating sequelize models and relationships
+  * try this new command / to generate a model & a migration
+    * `yarn sequelize-esm model:generate --name Book --attributes 
+    title:string,isbn:string,publishData:data`  (no spaces inbetween ,)
+    * note - I wrote data instead of date / and things went whacky... find out what that sets and how that makes things confused. Why I can't just ammend those three places by hand? Maybe I didn't migrate
+  * add Author reference
+  * `yarn sequelize-esm db:migrate`
+  * check out .associate(models) 
+  * - little exploration of the interactive terminal.
+  * - `node -r esm`  - what is `-r`?
+  * - - starts interactive shell - / node with es6 stuffs
+  * - - 
