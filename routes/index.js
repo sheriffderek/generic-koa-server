@@ -6,7 +6,6 @@ import author from './author';
 const router = new Router();
 
 router.use('/', status);
-router.use('/things', thing);
 router.use('/authors', author);
 
 export default router;
