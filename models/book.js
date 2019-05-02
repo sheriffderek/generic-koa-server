@@ -5,6 +5,7 @@ const createModel = (sequelize, DataTypes) => {
     publishDate: DataTypes.DATE
   }, {});
   Book.associate = function(models) {
+    // associations can be defined here
     Book.belongsTo(models.Author);
   };
   return Book;

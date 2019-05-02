@@ -46,7 +46,9 @@
 #### 6. Make sure you have postgres installed
   * At this point I got `ERROR: connect ECONNREFUSED 127.0.0.1:5432` when I tried to db:create
   * Which means postgress isn't running
-  * Mention this to Ryan
+  * Options:
+    `--version` 
+    `--help`
 
 #### 7. Create a database
   * update path in the model index
@@ -79,3 +81,23 @@
   * - `node -r esm`  - what is `-r`?
   * - - starts interactive shell - / node with es6 stuffs
   * - - 
+
+
+
+## When getting back into the project... what do you need to remember?
+
+* gotta have the database stuff running... 
+* you can't just type `sequelize-esm`... you need to use `yarn` for some reason (find out reason...)
+
+### Trying to get the interactive shell part ot work... 
+
+Full Stack Ember with Node.js
+10:55:20 | 61 videos
+
+Creating Sequelize Models and Relationships
+
+.........
+
+I've revisited this a few times / and I never found out what the problem was... - so, I could have had postress stop running... or messed up a migration... / but it's all working this 4th time around... / so, - I wont dwell on it.
+
+

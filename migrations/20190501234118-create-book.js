@@ -1,5 +1,4 @@
 export default {
-
   async up(queryInterface, Sequelize) {
     return await queryInterface.createTable('Books', {
       id: {
@@ -21,7 +20,7 @@ export default {
         type: Sequelize.INTEGER,
         references: {
           model: 'Authors',
-          key: 'id' // Author id points to Author > id ~ 
+          key: 'id'
         }
       },
       createdAt: {
@@ -34,9 +33,7 @@ export default {
       }
     });
   },
-
   async down(queryInterface, Sequelize) {
     return await queryInterface.dropTable('Books');
-  },
-
+  }
 };
